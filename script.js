@@ -1,6 +1,6 @@
 /* -------------------------- element declarations -------------------------- */
 
-let todoContainer = document.querySelector("#todo-container")
+let todoContainer = document.querySelector("#list-container")
 let addItemButton = document.querySelector("#add-item")
 
 /* ---------------------------------- init ---------------------------------- */
@@ -23,7 +23,7 @@ function todoRender() {
 
         listElement.innerHTML = `
             <p>${currentList[i]}</p>
-            <button onclick="todoRemove(${i})">Remove</button>
+            <button onclick="todoRemove(${i})">X</button>
         `
 
         todoContainer.appendChild(listElement)
@@ -52,7 +52,7 @@ function todoRemove(index) {
 
         todoRender()
     } else {
-        console.error("Invalid index! 🚫")
+        console.error("invalid index")
     }
 }
 
